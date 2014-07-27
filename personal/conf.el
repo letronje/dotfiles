@@ -1,29 +1,17 @@
 (prelude-require-packages '(color-theme
-                            auto-complete
-                            nlinum
-                            smooth-scrolling
-                            php-mode
-                            ;rinari
-                            ;highlight-indentation
-                            ;textmate
-                            ;hungry-delete
-                            ;ag
-                            ;multiple-cursors
-                            ;js2-mode
-                            ;ac-js2
                             ))
 
 (disable-theme 'zenburn)
- (require 'color-theme)
- (load-file "~/.emacs.d/themes/color-theme-dirac.el")
- (color-theme-dirac)
+(require 'color-theme)
+(load-file "~/.emacs.d/themes/color-theme-dirac.el")
+(color-theme-dirac)
 
 ;(global-whitespace-mode)
 ;(setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
 
 (set-default-font "Ubuntu Mono:pixelsize=18:foundry=unknown:weight=normal:slant=normal:width=normal:spacing=100:scalable=true")
 
-;(setq prelude-whitespace nil)
+(setq prelude-whitespace nil)
 (setq prelude-guru nil)
 (scroll-bar-mode -1)
 ;(setq prelude-flyspell nil)
@@ -32,30 +20,17 @@
 (setq projectile-completion-system 'grizzl)
 
 (add-hook 'prog-mode-hook
-          (lambda ()
-            (when (> (buffer-size) 40000)
-              (turn-off-smartparens-mode)
-              (turn-off-show-smartparens-mode))))
+           (lambda ()
+             (when (> (buffer-size) 40000)
+               (turn-off-smartparens-mode)
+               (turn-off-show-smartparens-mode))))
 
 (global-linum-mode 1)
-
-(require 'auto-complete-config)
-(dolist
-    (mode '(text-mode))
-  (add-to-list 'ac-modes mode))
-(add-hook 'text-mode-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-files-in-current-dir)
-            (add-to-list 'ac-sources 'ac-source-filename)))
-(ac-config-default)
 
 ;; (add-hook 'prog-mode-hook
 ;;           (lambda ()
 ;;             (highlight-indentation-mode)))
 
-
-;(setq yas-snippet-dirs '("~/.emacs.d/snippets/imported"))
-;(yas-global-mode 1)
 
 (add-hook 'web-mode-hook
           (lambda ()
@@ -71,10 +46,10 @@
 (setq javascript-indent-level 2)
 
 (add-hook 'php-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil
-                  tab-width 2
-                  c-basic-offset 2)))
+           (lambda ()
+             (setq indent-tabs-mode nil
+                   tab-width 2
+                   c-basic-offset 2)))
 
 (custom-set-variables '(coffee-tab-width 2))
 
