@@ -15,8 +15,8 @@
 (setq prelude-guru nil)
 (scroll-bar-mode -1)
 
-;;(setq prelude-flyspell nil)
-;;(setq projectile-enable-caching t)
+(setq prelude-flyspell nil)
+(setq projectile-enable-caching t)
 
 (setq projectile-completion-system 'grizzl)
 
@@ -62,9 +62,5 @@
 
 (global-set-key (kbd "s-x") 'er/expand-region)
 (global-set-key (kbd "s-z") 'er/contract-region)
-
-(global-set-key (kbd "C-c p a") 'ag-project)
-
-
 
 (provide 'conf)
