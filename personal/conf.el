@@ -1,4 +1,7 @@
 (prelude-require-packages '(color-theme
+                            ag
+                            smooth-scrolling
+                            sml-mode
                             ))
 
 (disable-theme 'zenburn)
